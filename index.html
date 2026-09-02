@@ -3,219 +3,382 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Политика конфиденциальности — FazendaMe</title>
-
+    <meta name="referrer" content="no-referrer">
+    <title>Политика конфиденциальности / Privacy Policy — FazendaMe</title>
     <style>
+        * { box-sizing: border-box; }
         body {
             font-family: Arial, sans-serif;
             max-width: 850px;
             margin: 0 auto;
             padding: 24px;
-            line-height: 1.6;
+            line-height: 1.65;
             color: #2f3b2f;
             background-color: #f7f4e8;
+            overflow-wrap: anywhere;
         }
-
-        h1, h2 {
-            color: #2f7a45;
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #d8ddce;
+            margin-bottom: 28px;
         }
-
-        h1 {
-            margin-bottom: 8px;
+        .brand { margin: 0; font-size: 1.25rem; font-weight: bold; }
+        .languages { display: flex; flex-wrap: wrap; gap: 8px; }
+        .languages a {
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
+            padding: 8px 16px;
+            border: 1px solid #2f7a45;
+            border-radius: 24px;
+            text-decoration: none;
         }
-
-        .date {
-            color: #666;
-            margin-bottom: 32px;
+        .languages a[aria-current="true"] { color: #fff; background: #2f7a45; }
+        a { color: #245f36; text-underline-offset: 3px; }
+        a:hover { text-decoration-thickness: 2px; }
+        a:focus-visible { outline: 3px solid #8a5b00; outline-offset: 4px; }
+        h1, h2 { color: #2f7a45; line-height: 1.3; }
+        h1 { font-size: 2rem; margin: 0 0 8px; }
+        h2 { font-size: 1.35rem; margin-top: 32px; }
+        .date, .language-note { color: #60665f; }
+        .date { margin: 8px 0; }
+        .language-note { margin: 8px 0 28px; font-size: 0.95rem; }
+        .contact { margin-top: 20px; padding: 18px; background: #fff; border-radius: 10px; }
+        .contact p { margin: 6px 0; }
+        article:not([hidden]) + article:not([hidden]) { margin-top: 56px; }
+        article[hidden] { display: none; }
+        @media (max-width: 480px) {
+            body { padding: 20px 16px; }
+            h1 { font-size: 1.65rem; }
         }
-
-        .contact {
-            margin-top: 32px;
-            padding: 18px;
-            background: #ffffff;
-            border-radius: 10px;
+        @media print {
+            body { max-width: none; padding: 0; background: #fff; color: #000; }
+            .page-header, .language-note { display: none; }
+            article[hidden] { display: block; }
+            article + article { break-before: page; margin-top: 0; }
+            h2 { break-after: avoid; }
+            .contact { break-inside: avoid; }
         }
     </style>
 </head>
-
 <body>
+<header class="page-header">
+    <p class="brand">FazendaMe</p>
+    <nav class="languages" aria-label="Язык документа / Document language">
+        <a href="#ru" lang="ru" hreflang="ru" data-language="ru">Русский</a>
+        <a href="#en" lang="en" hreflang="en" data-language="en">English</a>
+    </nav>
+</header>
 
-<h1>Политика конфиденциальности FazendaMe</h1>
+<main>
+<article id="ru" lang="ru" aria-labelledby="title-ru">
+    <h1 id="title-ru">Политика конфиденциальности FazendaMe</h1>
+    <p class="date">Дата редакции: <time datetime="2026-09-02">2 сентября 2026 года</time></p>
+    <p class="language-note">Русская и английская версии доступны по ссылкам вверху страницы.</p>
 
-<p class="date">Дата редакции: 20 августа 2026 года</p>
+    <p>Настоящая Политика конфиденциальности описывает порядок обработки информации
+    при использовании мобильного приложения FazendaMe (далее — «Приложение»).</p>
 
-<p>
-Настоящая Политика конфиденциальности описывает порядок обработки
-информации при использовании мобильного приложения FazendaMe
-(далее — «Приложение»).
-</p>
+    <h2>1. Общие положения</h2>
+    <p>FazendaMe — мобильное приложение для планирования и организации работ в саду,
+    огороде, теплице, ухода за комнатными растениями и рассадой.</p>
+    <p>Разработчик стремится минимизировать обработку персональных данных пользователей.
+    Основные функции Приложения доступны без подключения к интернету.</p>
 
-<h2>1. Общие положения</h2>
+    <h2>2. Данные, вводимые пользователем</h2>
+    <p>Пользователь может самостоятельно создавать в Приложении информацию об участках,
+    грядках, растениях, культурах, рассаде, датах посадки, запланированных и выполненных
+    работах, времени напоминаний и собственные заметки.</p>
+    <p>В текущей версии FazendaMe эта информация хранится во внутреннем хранилище
+    Приложения. Приложение не отправляет её Разработчику или на серверы сторонних
+    сервисов. Возможное системное резервное копирование описано в разделе 8.</p>
+    <p>Разработчик не получает автоматического доступа к содержанию созданных
+    пользователем записей. Если пользователь самостоятельно присылает сведения
+    в обращении по электронной почте, они обрабатываются согласно разделу 9.</p>
 
-<p>
-FazendaMe — мобильное приложение для планирования и организации
-работ в саду, огороде, теплице и ухода за растениями.
-</p>
+    <h2>3. Регистрация, аналитика и учётная запись</h2>
+    <p>Текущая версия FazendaMe не требует регистрации и создания пользовательской
+    учётной записи.</p>
+    <p>Приложение не запрашивает у пользователя имя, номер телефона или адрес
+    электронной почты для использования основной функциональности.</p>
+    <p>Текущая версия Приложения не использует системы аналитики, не собирает
+    рекламные идентификаторы и не формирует профиль пользователя.</p>
 
-<p>
-Разработчик стремится минимизировать обработку персональных данных
-пользователей.
-</p>
+    <h2>4. Язык интерфейса и настройки устройства</h2>
+    <p>FazendaMe поддерживает русский и английский языки. Для первоначального
+    автоматического выбора языка Приложение может использовать доступный в Android
+    код страны оператора SIM-карты, а при его отсутствии — регион и язык системы.
+    Код страны оператора SIM-карты не определяет фактическое местоположение пользователя.</p>
+    <p>Эта обработка выполняется локально на устройстве. Для выбора языка Приложение
+    не запрашивает геолокацию, не читает номер телефона, контакты, IMEI или серийный
+    номер SIM-карты. Использованные коды стран не сохраняются самим Приложением
+    и не передаются Разработчику.</p>
+    <p>Выбранный язык и служебные настройки сохраняются на устройстве средствами
+    Приложения или Android. Пользователь может изменить язык в Приложении;
+    ручной выбор имеет приоритет перед первоначальным автоматическим выбором.</p>
 
-<h2>2. Данные, вводимые пользователем</h2>
+    <h2>5. Уведомления</h2>
+    <p>FazendaMe может запрашивать системное разрешение на отправку уведомлений.</p>
+    <p>Локальные уведомления используются для напоминания пользователю о запланированных
+    им работах по уходу за растениями с учётом выбранных даты и времени.</p>
+    <p>Разрешение на уведомления может быть предоставлено или отозвано пользователем
+    через настройки операционной системы Android.</p>
 
-<p>
-Пользователь может самостоятельно создавать в Приложении информацию
-об участках, грядках, растениях, культурах, запланированных работах
-и собственные заметки.
-</p>
+    <h2>6. Передача данных третьим лицам</h2>
+    <p>В текущей версии FazendaMe Разработчик не получает из Приложения введённые
+    пользователем данные и не продаёт и не передаёт их третьим лицам.</p>
+    <p>Системное резервное копирование, добровольная переписка и открытие внешних
+    веб-страниц являются отдельными случаями, описанными в разделах 8–10.</p>
 
-<p>
-В текущей версии FazendaMe эта информация хранится во внутреннем
-хранилище Приложения. Разработчик не получает её и не передаёт
-на собственные или иные удалённые серверы.
-</p>
+    <h2>7. Реклама</h2>
+    <p>Текущая версия FazendaMe не содержит рекламы и рекламных систем.</p>
+    <p>В случае добавления рекламных технологий в будущих версиях Приложения
+    настоящая Политика будет обновлена с указанием соответствующих способов
+    обработки данных и используемых сторонних сервисов. При необходимости
+    будут предусмотрены дополнительные уведомления и получение согласия.</p>
 
-<p>
-Разработчик не получает доступ к содержанию созданных пользователем
-участков, грядок, растений, заметок и запланированных работ.
-</p>
+    <h2>8. Хранение, резервное копирование и удаление данных</h2>
+    <p>Данные FazendaMe хранятся во внутреннем хранилище Приложения на устройстве
+    пользователя до их удаления пользователем или средствами Android.</p>
+    <p>В зависимости от настроек устройства и операционной системы Android данные
+    и настройки могут включаться в системную резервную копию, в том числе облачную,
+    или переноситься на другое устройство средствами системы. Создание, хранение,
+    перенос и удаление такой копии осуществляются средствами операционной системы
+    и соответствующего поставщика резервного копирования и контролируются
+    настройками пользователя. Разработчик FazendaMe не получает доступа
+    к содержимому такой резервной копии.</p>
+    <p>Пользователь может управлять созданной им информацией средствами Приложения.
+    Для удаления всех локальных данных можно очистить хранилище Приложения
+    в настройках Android. Также можно удалить Приложение вместе с его данными
+    средствами Android.</p>
+    <p>Удаление локальных данных не означает автоматического удаления ранее созданных
+    системных резервных копий. Управлять ими следует через настройки устройства
+    или соответствующего сервиса резервного копирования. При наличии такой копии
+    данные могут быть восстановлены системой, в том числе после повторной установки.</p>
 
-<h2>3. Регистрация, аналитика и учётная запись</h2>
+    <h2>9. Обращения по электронной почте</h2>
+    <p>Если пользователь добровольно обращается к Разработчику по электронной почте,
+    Разработчик получает адрес отправителя, содержание сообщения и иные сведения,
+    которые пользователь самостоятельно укажет в обращении.</p>
+    <p>Эти сведения используются для рассмотрения обращения и подготовки ответа.
+    Они не используются для рекламы или формирования профиля пользователя.</p>
+    <p>Переписка хранится в течение срока, необходимого для рассмотрения обращения,
+    защиты прав и законных интересов сторон либо выполнения требований закона.
+    Для запроса на удаление переписки пользователь может написать на адрес
+    <a href="mailto:fazendame@mail.ru">fazendame@mail.ru</a>.
+    Техническая обработка электронной переписки может осуществляться поставщиком
+    почтового сервиса в соответствии с его условиями и политикой конфиденциальности.</p>
 
-<p>
-Текущая версия FazendaMe не требует регистрации и создания
-пользовательской учётной записи.
-</p>
+    <h2>10. Внешние веб-страницы</h2>
+    <p>При открытии ссылок на Политику конфиденциальности и Пользовательское соглашение
+    браузер обращается к сайту на GitHub Pages. Поставщик хостинга может обрабатывать
+    технические данные запроса, например IP-адрес, сведения о браузере и время
+    обращения, в соответствии с
+    <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Политикой конфиденциальности GitHub</a>.</p>
+    <p>При открытии этих страниц Приложение не передаёт им содержимое растений,
+    заметок и работ. На этой странице Политики Разработчик не использует
+    рекламные или аналитические трекеры.</p>
+    <p>При первом открытии этой страницы её язык выбирается по языку браузера,
+    если язык не указан в ссылке. Его можно изменить кнопками вверху страницы.
+    Этот выбор не сохраняется в cookies или хранилище браузера.</p>
 
-<p>
-Приложение не запрашивает у пользователя имя, номер телефона
-или адрес электронной почты для использования основной функциональности.
-</p>
+    <h2>11. Безопасность</h2>
+    <p>Разработчик принимает разумные меры при разработке Приложения, направленные
+    на предотвращение несанкционированного доступа к информации.</p>
+    <p>При этом безопасность информации, находящейся непосредственно на устройстве
+    пользователя, также зависит от безопасности самого устройства и операционной
+    системы. Абсолютная безопасность не может быть гарантирована.</p>
 
-<p>
-Текущая версия Приложения не использует системы аналитики,
-не собирает рекламные идентификаторы и не формирует профиль пользователя.
-</p>
+    <h2>12. Изменения Политики</h2>
+    <p>Настоящая Политика может изменяться при добавлении новых функций, подключении
+    сторонних сервисов или изменении требований применимого законодательства.</p>
+    <p>Актуальная редакция Политики публикуется по постоянному адресу размещения
+    настоящего документа с указанием даты редакции.</p>
 
-<h2>4. Уведомления</h2>
+    <h2>13. Разработчик и контакты</h2>
+    <div class="contact">
+        <p><strong>Разработчик:</strong> Роман Старавойтов (Raman Staravoitau)</p>
+        <p><strong>Страна:</strong> Республика Беларусь</p>
+        <p><strong>Приложение:</strong> FazendaMe</p>
+        <p><strong>E-mail:</strong> <a href="mailto:fazendame@mail.ru">fazendame@mail.ru</a></p>
+    </div>
+</article>
 
-<p>
-FazendaMe может запрашивать системное разрешение на отправку уведомлений.
-</p>
+<article id="en" lang="en" aria-labelledby="title-en">
+    <h1 id="title-en">FazendaMe Privacy Policy</h1>
+    <p class="date">Last updated: <time datetime="2026-09-02">2 September 2026</time></p>
+    <p class="language-note">Russian and English versions are available using the links at the top of this page.</p>
 
-<p>
-Уведомления используются для напоминания пользователю
-о запланированных им работах по уходу за растениями.
-</p>
+    <p>This Privacy Policy describes how information is handled when you use
+    the FazendaMe mobile application (the “App”).</p>
 
-<p>
-Разрешение на уведомления может быть предоставлено или отозвано
-пользователем через настройки операционной системы Android.
-</p>
+    <h2>1. General information</h2>
+    <p>FazendaMe is a mobile application for planning and organising work in gardens,
+    vegetable plots and greenhouses, and for caring for houseplants and seedlings.</p>
+    <p>The Developer aims to minimise the processing of users’ personal data.
+    The App’s core features work without an internet connection.</p>
 
-<h2>5. Передача данных третьим лицам</h2>
+    <h2>2. Information entered by users</h2>
+    <p>You can create information in the App about plots, beds, plants, crops,
+    seedlings, planting dates, planned and completed tasks, reminder times,
+    and your own notes.</p>
+    <p>In the current version of FazendaMe, this information is stored in the App’s
+    internal storage. The App does not send it to the Developer or to third-party
+    servers. Possible system-level backups are described in section 8.</p>
+    <p>The Developer does not automatically gain access to the content of your
+    records. If you choose to include information in an email enquiry, it is
+    handled as described in section 9.</p>
 
-<p>
-В текущей версии FazendaMe Разработчик не передаёт введённые
-пользователем в Приложении данные третьим лицам.
-</p>
+    <h2>3. Registration, analytics and user accounts</h2>
+    <p>The current version of FazendaMe does not require registration or a user account.</p>
+    <p>The App does not ask for your name, phone number or email address to use
+    its core features.</p>
+    <p>The current version of the App does not use analytics systems, collect
+    advertising identifiers or build a user profile.</p>
 
-<h2>6. Реклама</h2>
+    <h2>4. Interface language and device settings</h2>
+    <p>FazendaMe supports Russian and English. To choose an initial interface
+    language automatically, the App may use the SIM operator’s country code
+    available through Android. If that code is unavailable, it uses the system’s
+    region and language. The SIM operator’s country code does not determine
+    your actual location.</p>
+    <p>This processing takes place locally on your device. To select a language,
+    the App does not request location access or read your phone number,
+    contacts, IMEI or SIM serial number. The country codes used for this purpose
+    are not stored by the App itself or sent to the Developer.</p>
+    <p>Your selected language and internal settings are saved on your device
+    by the App or Android. You can change the language within the App;
+    your manual selection takes precedence over the initial automatic choice.</p>
 
-<p>
-Текущая версия FazendaMe не содержит рекламных систем.
-</p>
+    <h2>5. Notifications</h2>
+    <p>FazendaMe may request the system permission to send notifications.</p>
+    <p>Local notifications remind you about plant care tasks you have scheduled,
+    using your selected dates and times.</p>
+    <p>You can grant or revoke notification permission in Android’s system settings.</p>
 
-<p>
-В случае добавления рекламных технологий в будущих версиях
-Приложения настоящая Политика будет обновлена с указанием
-соответствующих способов обработки данных и используемых
-сторонних сервисов.
-</p>
+    <h2>6. Sharing information with third parties</h2>
+    <p>In the current version of FazendaMe, the Developer does not receive
+    user-entered data from the App and does not sell or share that data
+    with third parties.</p>
+    <p>System backups, voluntary email correspondence and opening external
+    web pages are separate situations described in sections 8–10.</p>
 
-<h2>7. Хранение, резервное копирование и удаление данных</h2>
+    <h2>7. Advertising</h2>
+    <p>The current version of FazendaMe contains no advertising or advertising systems.</p>
+    <p>If advertising technologies are introduced in future versions of the App,
+    this Policy will be updated to describe the relevant data processing
+    and third-party services. Additional notices and consent mechanisms
+    will be provided where required.</p>
 
-<p>
-Данные FazendaMe хранятся во внутреннем хранилище Приложения
-на устройстве пользователя.
-</p>
+    <h2>8. Storage, backups and deletion</h2>
+    <p>FazendaMe data is stored in the App’s internal storage on your device
+    until it is deleted by you or through Android.</p>
+    <p>Depending on your device and Android settings, data and preferences may
+    be included in system backups, including cloud backups, or transferred
+    to another device using system features. The operating system and the
+    relevant backup provider handle the creation, storage, transfer and deletion
+    of those backups, subject to your settings. The FazendaMe Developer
+    cannot access the contents of those backups.</p>
+    <p>You can manage your records within the App. To remove all local data,
+    you can clear the App’s storage in Android settings. You can also uninstall
+    the App along with its data using Android’s system features.</p>
+    <p>Deleting local data does not automatically delete previously created
+    system backups. Manage those backups through your device settings or
+    the relevant backup service. If a backup exists, the system may restore
+    data, including after the App is reinstalled.</p>
 
-<p>
-В зависимости от настроек устройства и операционной системы Android
-данные могут включаться в системную резервную копию. Создание, хранение,
-перенос и удаление такой копии осуществляются средствами операционной
-системы и соответствующего поставщика резервного копирования и
-контролируются настройками пользователя. Разработчик FazendaMe не получает
-доступа к содержимому такой резервной копии.
-</p>
+    <h2>9. Email enquiries</h2>
+    <p>If you voluntarily contact the Developer by email, the Developer receives
+    your email address, the message content and any other information you
+    choose to include.</p>
+    <p>This information is used to handle your enquiry and respond to you.
+    It is not used for advertising or to build a user profile.</p>
+    <p>Correspondence is retained for as long as necessary to handle the enquiry,
+    protect the parties’ rights and legitimate interests, or meet legal requirements.
+    To request deletion of correspondence, email
+    <a href="mailto:fazendame@mail.ru">fazendame@mail.ru</a>.
+    The email service provider may technically process correspondence
+    in accordance with its terms and privacy policy.</p>
 
-<p>
-Пользователь может управлять созданной им информацией средствами
-Приложения. Удаление данных Приложения или самого Приложения средствами
-Android удаляет локально хранящуюся информацию. При наличии системной
-резервной копии отдельные данные могут быть восстановлены операционной
-системой в соответствии с настройками устройства пользователя.
-</p>
+    <h2>10. External web pages</h2>
+    <p>When you open the Privacy Policy or Terms of Use links, your browser
+    connects to a website hosted on GitHub Pages. The hosting provider may
+    process technical request data, such as your IP address, browser information
+    and request time, in accordance with the
+    <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+    <p>When opening these pages, the App does not send them the content of your
+    plant records, notes or tasks. The Developer does not use advertising
+    or analytics trackers on this Privacy Policy page.</p>
+    <p>When this page is first opened, its language is chosen using the browser
+    language unless the link specifies one. You can change it using the buttons
+    at the top of the page. This choice is not saved in cookies or browser storage.</p>
 
-<h2>8. Обращения по электронной почте</h2>
+    <h2>11. Security</h2>
+    <p>The Developer takes reasonable measures when developing the App to help
+    prevent unauthorised access to information.</p>
+    <p>The security of information stored on your device also depends on the
+    security of the device and its operating system. Absolute security
+    cannot be guaranteed.</p>
 
-<p>
-Если пользователь добровольно обращается к Разработчику по электронной
-почте, Разработчик получает адрес отправителя, содержание сообщения и иные
-сведения, которые пользователь самостоятельно укажет в обращении.
-</p>
+    <h2>12. Changes to this Policy</h2>
+    <p>This Policy may change when new features or third-party services are
+    introduced, or when applicable legal requirements change.</p>
+    <p>The current version is published at this document’s permanent address
+    and includes its revision date.</p>
 
-<p>
-Отправляя такое обращение, пользователь предоставляет указанные сведения
-для рассмотрения обращения и подготовки ответа. Они не используются для
-рекламы или формирования профиля пользователя.
-</p>
+    <h2>13. Developer and contact details</h2>
+    <div class="contact">
+        <p><strong>Developer:</strong> Raman Staravoitau (Роман Старавойтов)</p>
+        <p><strong>Country:</strong> Republic of Belarus</p>
+        <p><strong>Application:</strong> FazendaMe</p>
+        <p><strong>Email:</strong> <a href="mailto:fazendame@mail.ru">fazendame@mail.ru</a></p>
+    </div>
+</article>
+</main>
 
-<p>
-Переписка хранится в течение срока, необходимого для рассмотрения обращения,
-защиты прав и законных интересов сторон либо выполнения требований закона.
-Для запроса на удаление переписки пользователь может написать на адрес
-fazendame@mail.ru. Техническая обработка электронной переписки может
-осуществляться поставщиком почтового сервиса в соответствии с его условиями
-и политикой конфиденциальности.
-</p>
+<script>
+    // Both complete texts remain readable if JavaScript is disabled.
+    // No network requests, cookies or browser storage are used by this script.
+    (function () {
+        'use strict';
+        var articles = Array.from(document.querySelectorAll('main > article'));
+        var links = Array.from(document.querySelectorAll('[data-language]'));
 
-<h2>9. Безопасность</h2>
+        function showLanguage() {
+            var requested = window.location.hash.slice(1).toLowerCase();
+            var browserLanguage = (navigator.language || 'en').toLowerCase();
+            var language = requested === 'ru' || requested === 'en'
+                ? requested
+                : (browserLanguage.split('-')[0] === 'ru' ? 'ru' : 'en');
 
-<p>
-Разработчик принимает разумные меры при разработке Приложения,
-направленные на предотвращение несанкционированного доступа
-к информации.
-</p>
+            articles.forEach(function (article) {
+                article.hidden = article.id !== language;
+            });
+            links.forEach(function (link) {
+                if (link.getAttribute('data-language') === language) {
+                    link.setAttribute('aria-current', 'true');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+            });
+            document.documentElement.lang = language;
+            document.title = language === 'ru'
+                ? 'Политика конфиденциальности — FazendaMe'
+                : 'Privacy Policy — FazendaMe';
+        }
 
-<p>
-При этом безопасность информации, находящейся непосредственно
-на устройстве пользователя, также зависит от безопасности
-самого устройства и операционной системы.
-</p>
-
-<h2>10. Изменения Политики</h2>
-
-<p>
-Настоящая Политика может изменяться при добавлении новых функций,
-подключении сторонних сервисов или изменении требований
-применимого законодательства.
-</p>
-
-<p>
-Актуальная редакция Политики публикуется по постоянному адресу
-размещения настоящего документа.
-</p>
-
-<h2>11. Разработчик и контакты</h2>
-
-<div class="contact">
-    <p><strong>Разработчик:</strong> Роман Старавойтов</p>
-    <p><strong>Страна:</strong> Республика Беларусь</p>
-    <p><strong>Приложение:</strong> FazendaMe</p>
-    <p><strong>E-mail:</strong> fazendame@mail.ru</p>
-</div>
-
+        window.addEventListener('hashchange', function () {
+            showLanguage();
+            window.scrollTo(0, 0);
+        });
+        window.addEventListener('load', function () { window.scrollTo(0, 0); });
+        showLanguage();
+    }());
+</script>
 </body>
 </html>
