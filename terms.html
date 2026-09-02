@@ -3,186 +3,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пользовательское соглашение — FazendaMe</title>
-
+    <meta name="referrer" content="no-referrer">
+    <title>Пользовательское соглашение / Terms of Use — FazendaMe</title>
     <style>
+        * { box-sizing: border-box; }
         body {
             font-family: Arial, sans-serif;
             max-width: 850px;
             margin: 0 auto;
             padding: 24px;
-            line-height: 1.6;
+            line-height: 1.65;
             color: #2f3b2f;
             background-color: #f7f4e8;
+            overflow-wrap: anywhere;
         }
-
-        h1, h2 {
-            color: #2f7a45;
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #d8ddce;
+            margin-bottom: 28px;
         }
-
-        h1 {
-            margin-bottom: 8px;
+        .brand { margin: 0; font-size: 1.25rem; font-weight: bold; }
+        .languages { display: flex; flex-wrap: wrap; gap: 8px; }
+        .languages a {
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
+            padding: 8px 16px;
+            border: 1px solid #2f7a45;
+            border-radius: 24px;
+            text-decoration: none;
         }
-
-        .updated {
-            color: #666;
-            margin-bottom: 30px;
-        }
-
+        .languages a[aria-current="true"] { color: #fff; background: #2f7a45; }
+        a { color: #245f36; text-underline-offset: 3px; }
+        a:hover { text-decoration-thickness: 2px; }
+        a:focus-visible { outline: 3px solid #8a5b00; outline-offset: 4px; }
+        h1, h2 { color: #2f7a45; line-height: 1.3; }
+        h1 { font-size: 2rem; margin: 0 0 8px; }
+        h2 { font-size: 1.35rem; margin-top: 32px; }
+        .updated, .language-note { color: #60665f; }
+        .updated { margin: 8px 0; }
+        .language-note { margin: 8px 0 28px; font-size: 0.95rem; }
         .important {
             padding: 16px;
             background: #fff;
             border-left: 4px solid #2f7a45;
             margin: 20px 0;
         }
+        .contact { padding: 18px; background: #fff; border-radius: 10px; }
+        .contact p { margin: 6px 0; }
+        article:not([hidden]) + article:not([hidden]) { margin-top: 56px; }
+        article[hidden] { display: none; }
+        @media (max-width: 480px) {
+            body { padding: 20px 16px; }
+            h1 { font-size: 1.65rem; }
+        }
+        @media print {
+            body { max-width: none; padding: 0; background: #fff; color: #000; }
+            .page-header, .language-note { display: none; }
+            article[hidden] { display: block; }
+            article + article { break-before: page; margin-top: 0; }
+            h2 { break-after: avoid; }
+            .contact, .important { break-inside: avoid; }
+        }
     </style>
 </head>
-
 <body>
+<header class="page-header">
+    <p class="brand">FazendaMe</p>
+    <nav class="languages" aria-label="Язык документа / Document language">
+        <a href="#ru" lang="ru" hreflang="ru" data-language="ru">Русский</a>
+        <a href="#en" lang="en" hreflang="en" data-language="en">English</a>
+    </nav>
+</header>
 
-<h1>Пользовательское соглашение FazendaMe</h1>
+<main>
+<article id="ru" lang="ru" aria-labelledby="title-ru">
+    <h1 id="title-ru">Пользовательское соглашение FazendaMe</h1>
+    <p class="updated">Дата редакции: <time datetime="2026-09-02">2 сентября 2026 года</time></p>
+    <p class="language-note">Русская и английская версии доступны по ссылкам вверху страницы.
+    Выбор языка документа не меняет язык установленного приложения.</p>
 
-<p class="updated">Дата последнего обновления: 19 августа 2026 г.</p>
+    <p>Настоящее Пользовательское соглашение регулирует использование мобильного
+    приложения FazendaMe (далее — «Приложение»).</p>
+    <p>Разработчик Приложения: Роман Старавойтов, Республика Беларусь.<br>
+    Контактный e-mail: <a href="mailto:fazendame@mail.ru">fazendame@mail.ru</a>.</p>
 
-<p>
-Настоящее Пользовательское соглашение регулирует использование мобильного
-приложения FazendaMe (далее — «Приложение»).
-</p>
+    <h2>1. Общие положения</h2>
+    <p>Используя Приложение, пользователь подтверждает, что ознакомился с настоящим
+    Пользовательским соглашением и принимает его условия.</p>
+    <p>Если пользователь не согласен с условиями настоящего Соглашения, ему следует
+    прекратить использование Приложения.</p>
 
-<p>
-Разработчик Приложения: Роман Старавойтов, Республика Беларусь.<br>
-Контактный e-mail: fazendame@mail.ru
-</p>
+    <h2>2. Назначение приложения</h2>
+    <p>FazendaMe предназначено для планирования и организации работ на приусадебном
+    участке, в саду, огороде, теплице и при уходе за растениями, включая комнатные
+    растения и рассаду.</p>
+    <p>Приложение позволяет пользователю размещать объекты участка, вести информацию
+    о растениях и культурах, создавать заметки, планировать работы и получать напоминания.</p>
+    <p>В версиях, поддерживающих счётчик дней до или после посадки, расчёт основан
+    на указанной пользователем дате и текущей дате устройства. Такой счётчик
+    не определяет состояние растения и не является прогнозом всхожести,
+    созревания или урожайности.</p>
+    <p>Доступность отдельных функций может зависеть от установленной версии
+    Приложения и возможностей устройства.</p>
 
-<h2>1. Общие положения</h2>
+    <h2>3. Информационный характер материалов</h2>
+    <div class="important">
+        <strong>Важно:</strong> информация, рекомендации, сроки выполнения работ,
+        напоминания и другие материалы в FazendaMe носят исключительно
+        информационно-справочный характер.
+    </div>
+    <p>Они не являются гарантированной агрономической рекомендацией и не заменяют
+    профессиональную консультацию специалиста.</p>
+    <p>Результаты выращивания растений зависят от множества факторов, включая
+    погодные условия, климат, свойства почвы, сорт растений, качество посадочного
+    материала, применяемые удобрения и средства защиты растений, заболевания,
+    вредителей и действия самого пользователя.</p>
 
-<p>
-Используя Приложение, пользователь подтверждает, что ознакомился с настоящим
-Пользовательским соглашением и принимает его условия.
-</p>
+    <h2>4. Ответственность пользователя</h2>
+    <p>Пользователь самостоятельно принимает решения о выполнении сельскохозяйственных
+    и садовых работ, включая полив, внесение удобрений, обработку растений, посадку,
+    пересадку, обрезку, сбор урожая и другие действия.</p>
+    <p>Перед применением удобрений, средств защиты растений и иных препаратов
+    пользователь должен ознакомиться с инструкциями производителя и соблюдать
+    установленные нормы применения и требования безопасности.</p>
+    <p>Пользователю следует проверять правильность введённых дат и времени,
+    а также самостоятельно контролировать важные работы, не полагаясь
+    исключительно на уведомления.</p>
 
-<p>
-Если пользователь не согласен с условиями настоящего Соглашения, ему следует
-прекратить использование Приложения.
-</p>
+    <h2>5. Ограничение ответственности</h2>
+    <p>Разработчик стремится обеспечивать корректную работу Приложения и предоставлять
+    полезную информацию, однако не гарантирует, что информация и рекомендации будут
+    применимы к конкретным условиям пользователя или приведут к определённому результату.</p>
+    <p>В пределах, допускаемых применимым законодательством, разработчик не несёт
+    ответственности за потерю или снижение урожая, повреждение или гибель растений,
+    материальные убытки либо иные неблагоприятные последствия, возникшие в результате
+    решений пользователя, принятых на основании информации, напоминаний или
+    рекомендаций, содержащихся в Приложении.</p>
+    <p>Разработчик также не гарантирует бесперебойную и безошибочную работу Приложения
+    и не несёт ответственности за последствия, вызванные техническими сбоями,
+    неисправностью устройства пользователя или действиями третьих лиц,
+    в пределах, допускаемых применимым законодательством.</p>
+    <p>Доставка и время появления уведомлений зависят в том числе от разрешений
+    Android, настроек энергосбережения, ограничений фоновой работы и состояния
+    устройства. Уведомления могут задерживаться или не отображаться;
+    появление уведомления точно в выбранную минуту не гарантируется.</p>
 
-<h2>2. Назначение приложения</h2>
+    <h2>6. Пользовательские данные</h2>
+    <p>Порядок обработки данных и информация о конфиденциальности описаны в
+    <a href="https://romant27.github.io/fazendame-privacy/">Политике конфиденциальности FazendaMe</a>.</p>
+    <p>Информация о хранении, системном резервном копировании и удалении данных
+    также приведена в Политике конфиденциальности.</p>
 
-<p>
-FazendaMe предназначено для планирования и организации работ на приусадебном
-участке, в саду, огороде, теплице и при уходе за растениями.
-</p>
+    <h2>7. Интеллектуальная собственность</h2>
+    <p>Элементы интерфейса, тексты, графические материалы и иные материалы
+    Приложения охраняются применимым законодательством об интеллектуальной
+    собственности, если иное прямо не указано.</p>
 
-<p>
-Приложение позволяет пользователю размещать объекты участка, вести информацию
-о растениях и культурах, создавать заметки, планировать работы и получать
-напоминания.
-</p>
+    <h2>8. Изменение приложения и соглашения</h2>
+    <p>Разработчик вправе развивать Приложение, изменять или добавлять его функции,
+    а также обновлять настоящее Пользовательское соглашение.</p>
+    <p>Актуальная версия Соглашения публикуется на этой странице. Продолжение
+    использования Приложения после вступления изменений в силу означает принятие
+    пользователем обновлённых условий в той мере, в которой это допускается
+    применимым законодательством.</p>
 
-<h2>3. Информационный характер материалов</h2>
+    <h2>9. Применимое законодательство</h2>
+    <p>Настоящее Соглашение применяется с учётом требований законодательства,
+    которое распространяется на отношения между разработчиком и пользователем.
+    Никакое положение настоящего Соглашения не ограничивает права пользователя,
+    которые не могут быть ограничены соглашением сторон в соответствии
+    с применимым законодательством.</p>
 
-<div class="important">
-<strong>Важно:</strong> информация, рекомендации, сроки выполнения работ,
-напоминания и другие материалы в FazendaMe носят исключительно
-информационно-справочный характер.
-</div>
+    <h2>10. Контактная информация</h2>
+    <div class="contact">
+        <p><strong>Разработчик:</strong> Роман Старавойтов (Raman Staravoitau)</p>
+        <p><strong>Страна:</strong> Республика Беларусь</p>
+        <p><strong>Приложение:</strong> FazendaMe</p>
+        <p><strong>E-mail:</strong> <a href="mailto:fazendame@mail.ru">fazendame@mail.ru</a></p>
+    </div>
+</article>
 
-<p>
-Они не являются гарантированной агрономической рекомендацией и не заменяют
-профессиональную консультацию специалиста.
-</p>
+<article id="en" lang="en" aria-labelledby="title-en">
+    <h1 id="title-en">FazendaMe Terms of Use</h1>
+    <p class="updated">Last updated: <time datetime="2026-09-02">2 September 2026</time></p>
+    <p class="language-note">Russian and English versions are available using the links
+    at the top of this page. Choosing a document language does not change the language
+    of the installed app.</p>
 
-<p>
-Результаты выращивания растений зависят от множества факторов, включая
-погодные условия, климат, свойства почвы, сорт растений, качество посадочного
-материала, применяемые удобрения и средства защиты растений, заболевания,
-вредителей и действия самого пользователя.
-</p>
+    <p>These Terms of Use govern your use of the FazendaMe mobile application
+    (the “App”).</p>
+    <p>App Developer: Raman Staravoitau, Republic of Belarus.<br>
+    Contact email: <a href="mailto:fazendame@mail.ru">fazendame@mail.ru</a>.</p>
 
-<h2>4. Ответственность пользователя</h2>
+    <h2>1. General provisions</h2>
+    <p>By using the App, you confirm that you have read these Terms of Use
+    and accept them.</p>
+    <p>If you do not agree to these Terms, you should stop using the App.</p>
 
-<p>
-Пользователь самостоятельно принимает решения о выполнении сельскохозяйственных
-и садовых работ, включая полив, внесение удобрений, обработку растений,
-посадку, пересадку, обрезку, сбор урожая и другие действия.
-</p>
+    <h2>2. Purpose of the App</h2>
+    <p>FazendaMe is designed to help you plan and organise work on your property,
+    in gardens, vegetable plots and greenhouses, and to care for plants,
+    including houseplants and seedlings.</p>
+    <p>The App allows you to add garden objects, keep information about plants
+    and crops, create notes, schedule tasks and receive reminders.</p>
+    <p>In versions that support counting days before or after planting, the
+    calculation is based on the date you enter and the current date on your device.
+    This counter does not assess plant health or predict germination, maturity
+    or crop yields.</p>
+    <p>The availability of individual features may depend on the installed
+    version of the App and your device’s capabilities.</p>
 
-<p>
-Перед применением удобрений, средств защиты растений и иных препаратов
-пользователь должен ознакомиться с инструкциями производителя и соблюдать
-установленные нормы применения и требования безопасности.
-</p>
+    <h2>3. Informational nature of the content</h2>
+    <div class="important">
+        <strong>Important:</strong> information, recommendations, task schedules,
+        reminders and other content in FazendaMe are provided solely
+        for information and reference purposes.
+    </div>
+    <p>They do not constitute guaranteed agronomic advice and are not a substitute
+    for professional advice from a qualified specialist.</p>
+    <p>Plant growing results depend on many factors, including weather, climate,
+    soil characteristics, plant varieties, the quality of planting material,
+    fertilisers and plant protection products used, diseases, pests and
+    your own actions.</p>
 
-<h2>5. Ограничение ответственности</h2>
+    <h2>4. User responsibilities</h2>
+    <p>You are responsible for your decisions about agricultural and gardening
+    work, including watering, applying fertilisers, treating plants, planting,
+    transplanting, pruning, harvesting and other activities.</p>
+    <p>Before using fertilisers, plant protection products or other preparations,
+    you must read the manufacturer’s instructions and follow the specified
+    application rates and safety requirements.</p>
+    <p>You should check the dates and times you enter and independently keep
+    track of important tasks, rather than relying solely on notifications.</p>
 
-<p>
-Разработчик стремится обеспечивать корректную работу Приложения и предоставлять
-полезную информацию, однако не гарантирует, что информация и рекомендации
-будут применимы к конкретным условиям пользователя или приведут к определённому
-результату.
-</p>
+    <h2>5. Limitation of liability</h2>
+    <p>The Developer aims to ensure that the App works correctly and provides
+    useful information. However, the Developer does not guarantee that information
+    or recommendations will apply to your particular circumstances or produce
+    a specific result.</p>
+    <p>To the extent permitted by applicable law, the Developer is not liable
+    for crop loss or reduced yields, damage to or loss of plants, financial losses
+    or other adverse consequences resulting from decisions you make based
+    on information, reminders or recommendations contained in the App.</p>
+    <p>The Developer also does not guarantee uninterrupted or error-free operation
+    of the App and, to the extent permitted by applicable law, is not liable
+    for consequences caused by technical failures, malfunctions of your device
+    or the actions of third parties.</p>
+    <p>Notification delivery and timing depend on factors including Android
+    permissions, battery-saving settings, background activity restrictions
+    and the state of your device. Notifications may be delayed or may not appear;
+    delivery at the exact selected minute is not guaranteed.</p>
 
-<p>
-В пределах, допускаемых применимым законодательством, разработчик не несёт
-ответственности за потерю или снижение урожая, повреждение или гибель растений,
-материальные убытки либо иные неблагоприятные последствия, возникшие в
-результате решений пользователя, принятых на основании информации,
-напоминаний или рекомендаций, содержащихся в Приложении.
-</p>
+    <h2>6. User data</h2>
+    <p>Data handling and privacy information are described in the
+    <a href="https://romant27.github.io/fazendame-privacy/">FazendaMe Privacy Policy</a>.</p>
+    <p>The Privacy Policy also describes data storage, system backups and deletion.</p>
 
-<p>
-Разработчик также не гарантирует бесперебойную и безошибочную работу
-Приложения и не несёт ответственности за последствия, вызванные техническими
-сбоями, неисправностью устройства пользователя или действиями третьих лиц,
-в пределах, допускаемых применимым законодательством.
-</p>
+    <h2>7. Intellectual property</h2>
+    <p>The App’s interface elements, text, graphics and other materials are
+    protected by applicable intellectual property law unless expressly
+    stated otherwise.</p>
 
-<h2>6. Пользовательские данные</h2>
+    <h2>8. Changes to the App and these Terms</h2>
+    <p>The Developer may develop the App, change or add features, and update
+    these Terms of Use.</p>
+    <p>The current version of these Terms is published on this page. Your
+    continued use of the App after changes take effect constitutes acceptance
+    of the updated Terms to the extent permitted by applicable law.</p>
 
-<p>
-Порядок обработки данных и информация о конфиденциальности описаны
-в Политике конфиденциальности FazendaMe.
-</p>
+    <h2>9. Applicable law</h2>
+    <p>These Terms apply subject to the laws governing the relationship between
+    the Developer and the user. Nothing in these Terms limits any user rights
+    that cannot be limited by agreement under applicable law.</p>
 
-<h2>7. Интеллектуальная собственность</h2>
+    <h2>10. Contact information</h2>
+    <div class="contact">
+        <p><strong>Developer:</strong> Raman Staravoitau (Роман Старавойтов)</p>
+        <p><strong>Country:</strong> Republic of Belarus</p>
+        <p><strong>Application:</strong> FazendaMe</p>
+        <p><strong>Email:</strong> <a href="mailto:fazendame@mail.ru">fazendame@mail.ru</a></p>
+    </div>
+</article>
+</main>
 
-<p>
-Элементы интерфейса, тексты, графические материалы и иные материалы
-Приложения охраняются применимым законодательством об интеллектуальной
-собственности, если иное прямо не указано.
-</p>
+<script>
+    // Both complete texts remain readable if JavaScript is disabled.
+    // No network requests, cookies or browser storage are used by this script.
+    (function () {
+        'use strict';
+        var articles = Array.from(document.querySelectorAll('main > article'));
+        var links = Array.from(document.querySelectorAll('[data-language]'));
 
-<h2>8. Изменение приложения и соглашения</h2>
+        function showLanguage() {
+            var requested = window.location.hash.slice(1).toLowerCase();
+            var browserLanguage = (navigator.language || 'en').toLowerCase();
+            var language = requested === 'ru' || requested === 'en'
+                ? requested
+                : (browserLanguage.split('-')[0] === 'ru' ? 'ru' : 'en');
 
-<p>
-Разработчик вправе развивать Приложение, изменять или добавлять его функции,
-а также обновлять настоящее Пользовательское соглашение.
-</p>
+            articles.forEach(function (article) {
+                article.hidden = article.id !== language;
+            });
+            links.forEach(function (link) {
+                if (link.getAttribute('data-language') === language) {
+                    link.setAttribute('aria-current', 'true');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+            });
+            document.documentElement.lang = language;
+            document.title = language === 'ru'
+                ? 'Пользовательское соглашение — FazendaMe'
+                : 'Terms of Use — FazendaMe';
+        }
 
-<p>
-Актуальная версия Соглашения публикуется на этой странице.
-Продолжение использования Приложения после вступления изменений в силу
-означает принятие пользователем обновлённых условий в той мере, в которой
-это допускается применимым законодательством.
-</p>
-
-<h2>9. Применимое законодательство</h2>
-
-<p>
-Настоящее Соглашение применяется с учётом требований законодательства,
-которое распространяется на отношения между разработчиком и пользователем.
-Никакое положение настоящего Соглашения не ограничивает права пользователя,
-которые не могут быть ограничены соглашением сторон в соответствии
-с применимым законодательством.
-</p>
-
-<h2>10. Контактная информация</h2>
-
-<p>
-Разработчик: Роман Старавойтов<br>
-Страна: Республика Беларусь<br>
-E-mail: fazendame@mail.ru
-</p>
-
+        window.addEventListener('hashchange', function () {
+            showLanguage();
+            window.scrollTo(0, 0);
+        });
+        window.addEventListener('load', function () { window.scrollTo(0, 0); });
+        showLanguage();
+    }());
+</script>
 </body>
 </html>
